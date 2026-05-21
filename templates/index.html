@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="vi">
+	<head>
+		<title>Trang thông tin đội 1</title>
+		<link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Giới thiệu</a></li>
+							<li class="menu">
+								<a href="#one">Danh mục</a>
+								<ul class="menu-child" style="display: block;">
+									<li id="rules-inMenu">
+										<a href="#rules-header">Quy định đội 1</a>
+									</li>
+									<li id="hotspot_787-inMenu">
+										<a href="#hotspot_787-header">Hot Spots - Các điểm chú ý kểm tra sớm tàu B787</a>
+									</li>
+									<li id="tool-local-inMenu">
+										<a href="#tool-local-header">Danh mục tool lẻ tàu B787</a>
+									</li>
+<!--									<li id="info-inMenu">-->
+<!--										<a href="#info-header">Thông tin thêm</a>-->
+<!--									</li>-->
+								</ul>
+							</li>
+							<!--li><a href="#two">What we do</a></li> -->
+							<li><a href="#three">Liên hệ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<div class="logo">
+								<a href="http://vaeco.com.vn/web/vi/">
+									<img class="logo-image" src="static/images/vaeco-logo.png" alt="VAECO"></img>
+								</a>
+							</div>
+							<h1>TRANG THÔNG TIN ĐỘI BẢO DƯỠNG SỐ 1</h1>
+							<p>Trung tâm bảo dưỡng Nội trường Hồ Chí Minh</a></p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Xem thêm</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<!--Section rules -->
+						<section>
+							<a href="{{ url_for('rules') }}"class="image"><img src="static/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2 id="rules-header">Quy định đội 1</h2>
+									<p>Thông tin về nội quy nhân viên đội 1 cần tuân thủ</p>
+									<ul class="actions">
+										<li><a href="{{ url_for('rules') }}" class="button">Truy cập</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<!--Section hotspots -->
+						<section>
+							<a href="{{ url_for('hotspot') }}" class="image"><img src="static/images/pic02.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2 id="hotspot_787-header">Hot Spots - Các điểm chú ý kểm tra sớm tàu B787</h2>
+									<ul class="actions">
+										<li><a href="{{ url_for('hotspot') }}" class="button">Truy cập</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<!--Section tools for 787 -->
+						<section>
+							<a href="{{ url_for('b787_tools') }}" class="image"><img src="static/images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2 id="tool-local-header">Danh mục tool lẻ tàu B787</h2>
+									<ul class="actions">
+										<li><a href="{{ url_for('b787_tools') }}" class="button">Truy cập</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+<!--						<section>-->
+<!--							<a href="#" class="image"><img src="static/images/pic04.jpg" alt="" data-position="top center" /></a>-->
+<!--							<div class="content">-->
+<!--								<div class="inner">-->
+<!--									<h2 id="info-header">Thông tin thêm</h2>-->
+<!--									<p>Danh mục tra cứu các đường link</p>-->
+<!--									<ul class="actions">-->
+<!--										<li><a href="generic.html" class="button">Truy cập</a></li>-->
+<!--									</ul>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</section>-->
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Liên hệ</h2>
+							<div class="split style1">
+								<ul class="contact">
+									<li>
+										<h3>Địa chỉ</h3>
+										<span>Công ty TNHH MTV Kỹ thuật máy bay VAECO, A75 Đ.Trường Sơn, Phường Tân Sơn Hòa, Tp.Hồ Chí Minh</span>
+										</li>
+									<li>
+										<h3>Số điện thoại liên hệ</h3>
+										<span>Mr. Nguyễn Đình Hiệt - 0908206182 <br></span>
+										<span>Mr. Nguyễn Thành Vũ - 0973339492 </span>
+									</li>
+								</ul>
+							</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Copyright &copy; 2026 - VAECO. All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>B787 Hotspot Inspection</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+    <link rel="stylesheet" href="static/assets/css/hotspot.css">
+    <script src="static/assets/js/hotspot-filter.js"></script>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <a href="{{ url_for('home') }}" class="back-btn">
+            Trang chủ
+        </a>
+
+        <div class="page-title">
+            HOT SPOT - CÁC ĐIỂM CHÚ Ý KIỂM TRA SỚM TÀU B787
+        </div>
+
+        <div class="logo-area">
+            <img src="static/images/vaeco-logo.png">
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <!-- FILTER AREA -->
+
+        <div class="filter-section">
+            <div class="filter-box">
+
+                <label>Check Type</label>
+
+                <select id="typeFilter">
+                    <option>ALL</option>
+                    <option>A-CHK/EVENT 1-2 ngày</option>
+                    <option>CHK A06, A12</option>
+					<option>C/Y-CHK > 7 ngày</option>
+                </select>
+
+            </div>
+
+            <div class="filter-box">
+
+                <label>Zone</label>
+
+                <select id="zoneFilter">
+                    <option>ALL</option>
+                    <option>100-200-800</option>
+                    <option>300-400</option>
+                    <option>500-600-700</option>
+                    <option>AVI</option>
+                </select>
+
+            </div>
+
+            <button id="searchBtn" class="search-btn">Search</button>
+
+        </div>
+
+        <!-- HOTSPOT CARD -->
+        <!-- A-CHK/EVENT 1-2 ngày / Card 1 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 100-200-800
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra nose radome seal for damages
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/radome-seal.jpg" alt="Radome seal">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 2 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 100-200-800
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra cockpit window for scratch, delamination, burn
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/cockpit-window.jpg" alt="Cockpit window">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 3 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 100-200-800
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra bustle pax door for cracked
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/bustle-pax-door.jpg" alt="Bustle Pax Door">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 4 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 100-200-800
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra P56, P57 panel for loosen
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/p56p57-panel.jpg" alt="P56 P57 Panel">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 5 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 100-200-800
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra sloping liner buồng hàng for damages
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/sloping-liner.jpg" alt="Sloping liner">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 6 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 100-200-800
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra upper depressor seal cửa pax for cracked
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/upper-depressor-seal.jpg" alt="Upper depressor seal">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 7 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra missing sealant at inlet lipskin
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/ok-inlet-lipskin.jpg" alt="Good Inlet lipskin">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/inlet-lipskin.jpg" alt=" Defected Inlet lipskin">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 8 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra aft fire spring seal, depressor seal (blocker seal) của 2 động cơ
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/good-spring-seal.jpg" alt=" Good spring seal">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/defected-spring-seal.jpg" alt=" Defected spring seal">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+                <!-- A-CHK/EVENT 1-2 ngày / Card 9 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra Blanket của 2 động cơ có bị thủng, vết dầu chảy, dầu cháy
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/blanket.jpg" alt=" Blanket">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 10 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra bumper pad của 2 T/R động cơ for damages/missing
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/ok-bumper-pad.jpg" alt="ok-bumper-pad">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/loose-bumper-pad.jpg" alt="loose-bumper-pad">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 11 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra corrosion aft access door của buồng HSTA
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/HSTA-access-door.jpg" alt="HSTA">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 12 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra crack của  Pylon aft fairing heat shield
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/pylon-aft-fairing.jpg" alt="Pylon aft fairing">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 13 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 500-600-700
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra RDC cover of LG wheel for loose, missing nut
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/RDC-LDG.jpg" alt="RDC cover">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 14 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 500-600-700
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra flap seal for damages
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/flap-seal.jpg" alt="RDC cover">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 15 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 500-600-700
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra Flags của LDG safety Pin
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/ldg-flag.jpg" alt="RDC cover">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 16 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone AVI
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra Brake wire bundle for damages
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/brake-wires.jpg" alt="Brake wires">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- A-CHK/EVENT 1-2 ngày / Card 17 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        A-CHK/EVENT 1-2 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone AVI
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra tình trạng dòng, áp của MAIN BAT, APU BAT
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/BAT.jpg" alt="BAT">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CHK A06, A12 / Card 1 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        CHK A06, A12
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone ALL
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p id="required-check-A06-A12">
+                        Kiểm tra các Item của A-CHK/EVENT 1-2 ngày
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+         <!-- CHK A06, A12 / Card 2 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        CHK A06, A12
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra/service oil của No-back brake housing
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             Add image here
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CHK A06, A12 / Card 3 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        CHK A06, A12
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra paint peel off, erosion trên stabilizer
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             Add image here
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/paint-stabilizer.jpg" alt="Paint peel off on stabilizer">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHK A06, A12 / Card 4 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        CHK A06, A12
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm leading edge protect của T/R động cơ
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/TR-LE-protect.jpg" alt="TR-LE">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CHK A06, A12 / Card 5 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        CHK A06, A12
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra tróc sơn lá cánh quạt
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/ok-blades.jpg" alt="Ok blades">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/defected-fan.jpg" alt="Defected blades">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CHK A06, A12 / Card 6 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        CHK A06, A12
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 500-600-700
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra paint peel off, erosion trên cánh, dưới cánh
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             Add image here
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/wing-paint-defected.jpg" alt="Paint peel off on wing">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CHK A06, A12 / Card 7 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        CHK A06, A12
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 500-600-700
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Thả flap,kiểm tra crack ở thanh rod ở wing rear spar
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             Add image here
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/rod.jpg" alt="rod">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- C/Y-CHK > 7 ngày / Card 1 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        C/Y-CHK > 7 ngày
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone ALL
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p id="required-check-Y">
+                        Kiểm tra các Item của A-CHK A06, A12
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- C/Y-CHK > 7 ngày / Card 2 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        C/Y-CHK > 7 ngày / Card 1
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 100-200-800
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Kiểm tra corrosion keel beam/keel beam all lav
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             <img src="static/images/B787-hotspots/keel-beam.jpg" alt="Keel beam">
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            <img src="static/images/B787-hotspots/defected-keel-beam.jpg" alt="Defected keel beam">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- C/Y-CHK > 7 ngày / Card 3 -->
+        <div class="hotspot-card">
+
+            <div class="card-header">
+
+                <div class="left-header">
+
+                    <div class="aircraft-tag">
+                        ✈ B787
+                    </div>
+
+                    <div class="check-tag">
+                        C/Y-CHK > 7 ngày / Card 1
+                    </div>
+
+                    <div class="zone-tag">
+                        Zone 300-400
+                    </div>
+
+                </div>
+
+                <div class="date-tag">
+                    Updated: 18/05/2026
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="hotspot-content">
+
+                <div class="description-section">
+
+                    <h3>
+                        📋 Nội dung cần chú ý kiểm tra
+                    </h3>
+
+                    <p>
+                        Func test No-Back Brake HSTA
+                    </p>
+
+                </div>
+
+                <!-- IMAGE SECTION -->
+
+                <div class="image-section">
+
+                    <!-- GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title good">
+                            ✅ Good Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                             Add image here
+                        </div>
+
+                    </div>
+
+                    <!-- NOT GOOD CONDITION -->
+
+                    <div class="image-box">
+
+                        <div class="image-title bad">
+                            ⚠ Defect Condition
+                        </div>
+
+                        <div class="image-placeholder">
+                            Add image here
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
