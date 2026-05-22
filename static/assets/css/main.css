@@ -3809,6 +3809,71 @@ input, select, textarea {
 
 		}
 
+		/* =========================================
+MOBILE SIDEBAR FIX
+========================================= */
+
+@media screen and (max-width: 736px) {
+
+    #sidebar {
+        height: auto;
+        position: relative;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        white-space: nowrap;
+
+        padding: 0.8em 1em;
+    }
+
+    #sidebar > .inner {
+        display: block;
+        min-height: auto;
+        width: max-content;
+    }
+
+    #sidebar nav {
+        width: max-content;
+    }
+
+    #sidebar nav ul {
+        display: flex;
+
+        flex-direction: row;
+        align-items: center;
+
+        gap: 1.5em;
+
+        width: max-content;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    #sidebar nav ul li {
+        display: block;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        flex-shrink: 0;
+    }
+
+    #sidebar nav a {
+        display: inline-block;
+
+        padding: 0.8em 0;
+
+        font-size: 0.62em;
+
+        line-height: 1.4;
+
+        white-space: nowrap;
+    }
+
+}
+
 /* Intro */
 
 	#intro {
@@ -3857,11 +3922,179 @@ input, select, textarea {
 
 		}
 
-    #EIPC_ref {
-    font-weight: bold;
-    text-decorator: underline;
-    }
-
     .logo-image {
         max-height: 80px;
         margin-bottom: 30px; }
+
+/* =========================================
+MOBILE HAMBURGER MENU
+========================================= */
+
+#mobile-menu-toggle,
+#mobile-overlay {
+    display: none;
+}
+
+/* MOBILE ONLY */
+@media screen and (max-width: 736px) {
+
+    /* ---------- BUTTON ---------- */
+
+    #mobile-menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 736px) {
+
+    #mobile-menu-toggle {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 5px;
+
+        position: fixed;
+
+        top: 12px;
+        left: 12px;
+
+        width: 46px;
+        height: 46px;
+
+        padding: 0;
+
+        border: none;
+        border-radius: 10px;
+
+        background: #19809A;
+
+        cursor: pointer;
+
+        z-index: 10002;
+
+        box-sizing: border-box;
+    }
+
+    #mobile-menu-toggle span {
+
+        display: block;
+
+        width: 26px;
+        height: 4px;
+
+        background: white;
+
+        border-radius: 3px;
+    }
+
+}
+
+    /* ---------- SIDEBAR ---------- */
+
+    #sidebar {
+        position: fixed;
+
+        top: 0;
+        left: -280px;
+
+        width: 260px;
+        height: 100vh;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        background: #264a5a;
+
+        transition: left 0.3s ease;
+
+        z-index: 10001;
+
+        padding: 4.5em 1.5em 2em 1.5em;
+
+        white-space: normal;
+    }
+
+    #sidebar.mobile-active {
+        left: 0;
+    }
+
+    #sidebar > .inner {
+        display: block;
+        width: 100%;
+        min-height: auto;
+    }
+
+    #sidebar nav {
+        width: 100%;
+    }
+
+    #sidebar nav ul {
+        display: block;
+        width: 100%;
+    }
+
+    #sidebar nav ul li {
+        display: block;
+
+        margin: 0 0 1em 0 !important;
+        padding: 0 !important;
+
+        height: auto;
+        line-height: normal;
+    }
+
+    #sidebar nav a {
+        display: block;
+
+        padding: 0.8em 0;
+
+        height: auto;
+        line-height: 1.5;
+
+        font-size: 0.72em;
+
+        white-space: normal;
+
+        margin-bottom: 10px;
+    }
+
+    /* ---------- OVERLAY ---------- */
+
+    #mobile-overlay {
+        display: block;
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0,0,0,0.45);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: 0.3s ease;
+
+        z-index: 10000;
+    }
+
+    #mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* ---------- WRAPPER ---------- */
+
+    #sidebar + #wrapper {
+        margin-left: 0;
+        padding-top: 0;
+    }
+
+}
