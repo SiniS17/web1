@@ -10,6 +10,8 @@
     <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
     <link rel="stylesheet" href="static/assets/css/hotspot.css">
     <script src="static/assets/js/hotspot-filter.js"></script>
+    <script src="static/assets/js/hotspot-upload.js"></script>
+    <script src="static/assets/js/login.js"></script>
 
 </head>
 
@@ -29,6 +31,42 @@
 
         <div class="logo-area">
             <img src="static/images/vaeco-logo.png">
+        </div>
+
+        <div class="mode-area">
+
+            {% if edit_mode %}
+
+                 <a href="{{ url_for('logout') }}"
+                   class="mode-btn">
+                    Đăng xuất
+                </a>
+
+            {% else %}
+
+                <button id="loginBtn"
+                    class="mode-btn">
+
+                    Đăng nhập
+
+                </button>
+
+            {% endif %}
+
+        </div>
+
+        <div class="mode-status">
+
+            {% if edit_mode %}
+                <span class="edit-mode">
+                    Chế độ chỉnh sửa
+                </span>
+            {% else %}
+                <span class="view-mode">
+                    Chế độ xem
+                </span>
+            {% endif %}
+
         </div>
 
     </div>
@@ -127,8 +165,35 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/radome-seal.jpg" alt="Radome seal">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_001"
+                             data-type="good">
+
+                             <img
+                                src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_001',
+                                            'good',
+                                            'static/images/B787-hotspots/radome-seal.jpg'
+                                        ) }}"
+                                alt="Radome seal">
+
+                             <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -141,8 +206,32 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_001"
+                             data-type="defected">
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_001',
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="">
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -208,8 +297,33 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/cockpit-window.jpg" alt="Cockpit window">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_002"
+                             data-type="good">
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_002',
+                                            'good',
+                                            'static/images/B787-hotspots/cockpit-window.jpg'
+                                        ) }}"
+                                alt="Cockpit window">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -222,8 +336,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_002"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_002',
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="Cockpit window defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -289,8 +429,33 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/bustle-pax-door.jpg" alt="Bustle Pax Door">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_003"
+                             data-type="good">
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_003',
+                                            'good',
+                                            'static/images/B787-hotspots/bustle-pax-door.jpg'
+                                        ) }}"
+                                alt="Bustle Pax Door">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -303,8 +468,33 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_003"
+                             data-type="defected">
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_003',
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="Bustle Pax Door defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -370,8 +560,33 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/p56p57-panel.jpg" alt="P56 P57 Panel">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_004"
+                             data-type="good">
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_0034,
+                                            'good',
+                                            'static/images/B787-hotspots/p56p57-panel.jpg'
+                                        ) }}"
+                                alt="P56 P57 Panel">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -384,8 +599,33 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_004"
+                             data-type="defected">
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_0034,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="P56 P57 Panel Defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -451,8 +691,35 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/sloping-liner.jpg" alt="Sloping liner">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_005"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_005,
+                                            'good',
+                                            'static/images/B787-hotspots/sloping-liner.jpg'
+                                        ) }}"
+                                alt="Sloping liner">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
+
                         </div>
 
                     </div>
@@ -465,8 +732,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_005"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_005,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="Sloping liner defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -532,8 +825,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/upper-depressor-seal.jpg" alt="Upper depressor seal">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_006"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_006,
+                                            'good',
+                                            'static/images/B787-hotspots/upper-depressor-seal.jpg'
+                                        ) }}"
+                                alt="Upper depressor seal">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -546,8 +865,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_006"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_006,
+                                            'defected',
+                                            'static/images/B787-hotspots/upper-depressor-seal.jpg'
+                                        ) }}"
+                                alt="Upper depressor seal defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -613,8 +958,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/ok-inlet-lipskin.jpg" alt="Good Inlet lipskin">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_007"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_007,
+                                            'good',
+                                            'static/images/B787-hotspots/ok-inlet-lipskin.jpg'
+                                        ) }}"
+                                alt="Good Inlet lipskin">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -627,8 +998,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/inlet-lipskin.jpg" alt=" Defected Inlet lipskin">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_007"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_007,
+                                            'defected',
+                                            'static/images/B787-hotspots/inlet-lipskin.jpg'
+                                        ) }}"
+                                alt="Defected Inlet lipskin">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -694,8 +1091,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/good-spring-seal.jpg" alt=" Good spring seal">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_008"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_008,
+                                            'good',
+                                            'static/images/B787-hotspots/good-spring-seal.jpg'
+                                        ) }}"
+                                alt="Good spring seal">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -708,8 +1131,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/defected-spring-seal.jpg" alt=" Defected spring seal">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_008"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_008,
+                                            'defected',
+                                            'static/images/B787-hotspots/defected-spring-seal.jpg'
+                                        ) }}"
+                                alt="Defected spring seal">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -775,8 +1224,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/blanket.jpg" alt=" Blanket">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_009"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_009,
+                                            'good',
+                                            'static/images/B787-hotspots/blanket.jpg'
+                                        ) }}"
+                                alt="Good Blanket">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -789,8 +1264,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_009"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_009,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="Defected Blanket">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -856,8 +1357,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/ok-bumper-pad.jpg" alt="ok-bumper-pad">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_010"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_010,
+                                            'good',
+                                            'static/images/B787-hotspots/ok-bumper-pad.jpg'
+                                        ) }}"
+                                alt="ok-bumper-pad">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -870,8 +1397,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/loose-bumper-pad.jpg" alt="loose-bumper-pad">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_010"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_010,
+                                            'defected',
+                                            'static/images/B787-hotspots/loose-bumper-pad.jpg'
+                                        ) }}"
+                                alt="loose-bumper-pad">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -937,8 +1490,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/HSTA-access-door.jpg" alt="HSTA">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_011"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_011,
+                                            'good',
+                                            'static/images/B787-hotspots/HSTA-access-door.jpg'
+                                        ) }}"
+                                alt="HSTA good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -951,8 +1530,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_011"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_011,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="HSTA defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1018,8 +1623,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/pylon-aft-fairing.jpg" alt="Pylon aft fairing">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_012"
+                             data-type="good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_012,
+                                            'good',
+                                            'static/images/B787-hotspots/pylon-aft-fairing.jpg'
+                                        ) }}"
+                                alt="Pylon aft fairing good">
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1032,8 +1663,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_012"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_012,
+                                            'defected',
+                                            'static/images/B787-hotspots/pylon-aft-fairing.jpg'
+                                        ) }}"
+                                alt="Pylon aft fairing defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1099,8 +1756,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/RDC-LDG.jpg" alt="RDC cover">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_013"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_013,
+                                            'good',
+                                            'static/images/B787-hotspots/RDC-LDG.jpg'
+                                        ) }}"
+                                alt="RDC cover">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1113,8 +1796,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_013"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_013,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="RDC cover defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1180,8 +1889,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/flap-seal.jpg" alt="RDC cover">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_014"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_014,
+                                            'good',
+                                            'static/images/B787-hotspots/flap-seal.jpg'
+                                        ) }}"
+                                alt="Flap seal good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1194,8 +1929,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_014"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_014,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                alt="Flap seal defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1261,8 +2022,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/ldg-flag.jpg" alt="RDC cover">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_015"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_015,
+                                            'good',
+                                            'static/images/B787-hotspots/ldg-flag.jpg'
+                                        ) }}"
+                                  alt="LDG flag good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1275,8 +2062,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_015"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_015,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                  alt="LDG flag defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1342,8 +2155,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/brake-wires.jpg" alt="Brake wires">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_016"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_016,
+                                            'good',
+                                            'static/images/B787-hotspots/brake-wires.jpg'
+                                        ) }}"
+                                  alt="Brake wires good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1356,8 +2195,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_016"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_016,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                  alt="Brake wires defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1423,8 +2288,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/BAT.jpg" alt="BAT">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_017"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_017,
+                                            'good',
+                                            'static/images/B787-hotspots/BAT.jpg'
+                                        ) }}"
+                                  alt="BAT good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1437,8 +2328,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_017"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_017,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                  alt="BAT defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1496,7 +2413,7 @@
 
         </div>
 
-         <!-- CHK A06, A12 / Card 2 -->
+         <!-- CHK A06, A12 / Card 2 / Hot Spot 18-->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -1551,8 +2468,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_018"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_018,
+                                            'good',
+                                            ''
+                                        ) }}"
+                                  alt="No brake housing good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1565,8 +2508,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_018"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_018,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                  alt="No brake housing defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1577,7 +2546,7 @@
 
         </div>
 
-        <!-- CHK A06, A12 / Card 3 -->
+        <!-- CHK A06, A12 / Card 3 / Hot Spot 19-->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -1632,8 +2601,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_019"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_019,
+                                            'good',
+                                            ''
+                                        ) }}"
+                                  alt="Stab paint good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1646,8 +2641,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/paint-stabilizer.jpg" alt="Paint peel off on stabilizer">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_019"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_019,
+                                            'defected',
+                                            'static/images/B787-hotspots/paint-stabilizer.jpg'
+                                        ) }}"
+                                  alt="Stab paint defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1659,7 +2680,7 @@
         </div>
 
 
-        <!-- CHK A06, A12 / Card 4 -->
+        <!-- CHK A06, A12 / Card 4 / Hot Spot 20-->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -1714,8 +2735,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/TR-LE-protect.jpg" alt="TR-LE">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_020"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_020,
+                                            'good',
+                                            'static/images/B787-hotspots/TR-LE-protect.jpg'
+                                        ) }}"
+                                  alt="TR-LE">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1728,8 +2775,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_020"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_020,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                  alt="TR-LE defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1740,7 +2813,7 @@
 
         </div>
 
-        <!-- CHK A06, A12 / Card 5 -->
+        <!-- CHK A06, A12 / Card 5 / Hot Spot 21-->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -1795,8 +2868,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/ok-blades.jpg" alt="Ok blades">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_021"
+                             data-type="good">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_021,
+                                            'good',
+                                            'static/images/B787-hotspots/ok-blades.jpg'
+                                        ) }}"
+                                  alt="Ok blades">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1809,8 +2908,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/defected-fan.jpg" alt="Defected blades">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_021"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_021,
+                                            'defected',
+                                            'static/images/B787-hotspots/defected-fan.jpg'
+                                        ) }}"
+                                  alt="Defected blades">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1821,7 +2946,7 @@
 
         </div>
 
-        <!-- CHK A06, A12 / Card 6 -->
+        <!-- CHK A06, A12 / Card 6 / Hot Spot 22-->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -1876,8 +3001,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_022"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_022,
+                                            'good',
+                                            ''
+                                        ) }}"
+                                  alt="Wing paint good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1890,8 +3041,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/wing-paint-defected.jpg" alt="Paint peel off on wing">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_022"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_022,
+                                            'defected',
+                                            'static/images/B787-hotspots/wing-paint-defected.jpg'
+                                        ) }}"
+                                  alt="Wing paint defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1902,7 +3079,7 @@
 
         </div>
 
-        <!-- CHK A06, A12 / Card 7 -->
+        <!-- CHK A06, A12 / Card 7 / Hot Spot 23-->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -1957,8 +3134,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_023"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_023,
+                                            'good',
+                                            ''
+                                        ) }}"
+                                  alt="Wing spar rod good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -1971,8 +3174,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/rod.jpg" alt="rod">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_023"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_023,
+                                            'defected',
+                                            'static/images/B787-hotspots/rod.jpg'
+                                        ) }}"
+                                  alt="Wing spar rod defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -2031,7 +3260,7 @@
         </div>
 
 
-        <!-- C/Y-CHK > 7 ngày / Card 2 -->
+        <!-- C/Y-CHK > 7 ngày / Card 2 / Hot Spot 24-->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -2086,8 +3315,35 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             <img src="static/images/B787-hotspots/keel-beam.jpg" alt="Keel beam">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_024"
+                             data-type="good">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_024,
+                                            'good',
+                                            'static/images/B787-hotspots/keel-beam.jpg'
+                                        ) }}"
+                                  alt="Keel beam good">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            <button class="upload-btn">
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -2100,8 +3356,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            <img src="static/images/B787-hotspots/defected-keel-beam.jpg" alt="Defected keel beam">
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_024"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_024,
+                                            'defected',
+                                            'static/images/B787-hotspots/defected-keel-beam.jpg'
+                                        ) }}"
+                                  alt="Defected keel beam">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -2112,7 +3394,7 @@
 
         </div>
 
-        <!-- C/Y-CHK > 7 ngày / Card 3 -->
+        <!-- C/Y-CHK > 7 ngày / Card 3 / Hot Spot 25 -->
         <div class="hotspot-card">
 
             <div class="card-header">
@@ -2167,8 +3449,34 @@
                             ✅ Good Condition
                         </div>
 
-                        <div class="image-placeholder">
-                             Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_025"
+                             data-type="good">
+
+                             <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_025,
+                                            'good',
+                                            ''
+                                        ) }}"
+                                  alt="No brake HSTA">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -2181,8 +3489,34 @@
                             ⚠ Defect Condition
                         </div>
 
-                        <div class="image-placeholder">
-                            Add image here
+                        <div class="image-placeholder"
+                             data-hotspot="hotspot_025"
+                             data-type="defected">
+
+                            <img src="{{ hotspot_image(
+                                            image_map,
+                                            'hotspot_025,
+                                            'defected',
+                                            ''
+                                        ) }}"
+                                  alt="No brake HSTA defected">
+
+                            <input
+                             type="file"
+                             class="image-input"
+                             accept="image/*"
+                             hidden>
+
+                            {% if edit_mode %}
+                            <button class="upload-btn">
+                                +
+                            </button>
+
+                            <button class="edit-btn" style="display:none;">
+                                ✏️
+                            </button>
+                            {% endif %}
+
                         </div>
 
                     </div>
@@ -2194,6 +3528,25 @@
         </div>
 
     </div>
+
+    <div id="login-failed-popup" class="popup-overlay">
+
+    <div class="popup-box">
+
+        <h3>Login Failed</h3>
+
+        <p>
+            Incorrect username or password.
+        </p>
+
+        <button id="popup-close-btn">
+            OK
+        </button>
+
+    </div>
+
+    </div>
+
 </body>
 
 </html>
