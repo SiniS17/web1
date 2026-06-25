@@ -17,10 +17,10 @@
 
 	<!-- Mobile Menu Button -->
 	<button id="mobile-menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
 
 	<!-- Mobile Overlay -->
 	<div id="mobile-overlay"></div>
@@ -43,12 +43,11 @@
 									<li id="tool-local-inMenu">
 										<a href="#tool-local-header">Danh mục tool lẻ tàu B787</a>
 									</li>
-<!--									<li id="info-inMenu">-->
-<!--										<a href="#info-header">Thông tin thêm</a>-->
-<!--									</li>-->
+									<li id="memories-inMenu">
+										<a href="#memories-header">Album đội 1</a>
+									</li>
 								</ul>
 							</li>
-							<!--li><a href="#two">What we do</a></li> -->
 							<li><a href="#three">Liên hệ</a></li>
 						</ul>
 					</nav>
@@ -66,7 +65,7 @@
 								</a>
 							</div>
 							<h1>TRANG THÔNG TIN ĐỘI BẢO DƯỠNG SỐ 1</h1>
-							<p>Trung tâm bảo dưỡng Nội trường Hồ Chí Minh</a></p>
+							<p>Trung tâm bảo dưỡng Nội trường Hồ Chí Minh</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Xem thêm</a></li>
 							</ul>
@@ -75,9 +74,10 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
-						<!--Section rules -->
+
+						<!-- Section rules -->
 						<section>
-							<a href="{{ url_for('rules') }}"class="image"><img src="static/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="{{ url_for('rules') }}" class="image"><img src="static/images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2 id="rules-header">Quy định đội 1</h2>
@@ -89,7 +89,7 @@
 							</div>
 						</section>
 
-						<!--Section hotspots -->
+						<!-- Section hotspots -->
 						<section>
 							<a href="{{ url_for('hotspot') }}" class="image"><img src="static/images/pic02.jpg" alt="" data-position="top center" /></a>
 							<div class="content">
@@ -102,7 +102,7 @@
 							</div>
 						</section>
 
-						<!--Section tools for 787 -->
+						<!-- Section tools for 787 -->
 						<section>
 							<a href="{{ url_for('b787_tools') }}" class="image"><img src="static/images/pic03.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
@@ -115,18 +115,20 @@
 							</div>
 						</section>
 
-<!--						<section>-->
-<!--							<a href="#" class="image"><img src="static/images/pic04.jpg" alt="" data-position="top center" /></a>-->
-<!--							<div class="content">-->
-<!--								<div class="inner">-->
-<!--									<h2 id="info-header">Thông tin thêm</h2>-->
-<!--									<p>Danh mục tra cứu các đường link</p>-->
-<!--									<ul class="actions">-->
-<!--										<li><a href="generic.html" class="button">Truy cập</a></li>-->
-<!--									</ul>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</section>-->
+						<!-- Section memories -->
+						<section>
+							<a href="{{ url_for('memories') }}" class="image"><img src="static/images/squad1.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2 id="memories-header">ALBUM ĐỘI 1 - TTBD NỘI TRƯỜNG HCM</h2>
+									<p>Album ảnh lưu giữ những khoảnh khắc của đội 1</p>
+									<ul class="actions">
+										<li><a href="{{ url_for('memories') }}" class="button">Truy cập</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
 					</section>
 
 				<!-- Three -->
@@ -138,7 +140,7 @@
 									<li>
 										<h3>Địa chỉ</h3>
 										<span>Công ty TNHH MTV Kỹ thuật máy bay VAECO, A75 Đ.Trường Sơn, Phường Tân Sơn Hòa, Tp.Hồ Chí Minh</span>
-										</li>
+									</li>
 									<li>
 										<h3>Số điện thoại liên hệ</h3>
 										<span>Mr. Nguyễn Đình Hiệt - 0908206182 <br></span>
@@ -146,6 +148,7 @@
 									</li>
 								</ul>
 							</div>
+						</div>
 					</section>
 			</div>
 
